@@ -1,10 +1,11 @@
 name: tivy
 description: Utility package for getting video quality urls for vimeo and youtube.
 version: 0.1.0+1
+homepage: https://github.com/mixin27/tivy
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-  flutter: 3.10.0
+  flutter: ">=3.10.0"
 
 dependencies:
   equatable: ^2.0.5
