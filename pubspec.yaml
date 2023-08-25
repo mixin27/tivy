@@ -1,5 +1,5 @@
 name: tivy
-description: Utility package for getting video information of YouTube and Vimeo video urls.
+description: Utility package for getting video quality urls for vimeo and youtube.
 version: 0.1.0+1
 
 environment:

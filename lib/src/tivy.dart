@@ -12,8 +12,7 @@ import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 const tivy = Tivy();
 
 /// {@template tivy}
-/// Utility package for getting video information of YouTube
-/// and Vimeo video urls.
+/// Utility package for getting video quality urls for vimeo and youtube.
 /// {@endtemplate}
 class Tivy {
   /// {@macro}
@@ -21,7 +20,7 @@ class Tivy {
 
   /// Get `Vimeo` video quality urls.
   ///
-  /// `videoId` - Vimeo video id.
+  /// `videoIdOrUrl` - Vimeo video id or url.
   ///
   ///
   /// Example:
@@ -31,14 +30,22 @@ class Tivy {
   ///  );
   /// ```
   Future<List<VideoQalityUrl>> getVimeoVideoQualityUrls(
-    String videoId, {
+    String videoIdOrUrl, {
     String? hash,
   }) async {
     try {
+      String videoId;
+
+      if (videoIdOrUrl.startsWith('https://vimeo.com')) {
+        final videoInfo = await getVimeoVideoInfo(videoIdOrUrl);
+        videoId = videoInfo.videoId;
+      } else {
+        videoId = videoIdOrUrl;
+      }
+
       final response = await _makeRequestHash(videoId: videoId, hash: hash);
       final jsonData = jsonDecode(response.body)['request']['files']
           ['progressive'] as List<dynamic>;
-
       final progressiveUrls = List.generate(
         jsonData.length,
         (index) => VideoQalityUrl(
@@ -48,17 +55,14 @@ class Tivy {
           url: jsonData[index]['url'] as String,
         ),
       );
-
       if (progressiveUrls.isEmpty) {
         final jsonRes =
             jsonDecode(response.body)['request']['files']['hls']['cdns'];
-        final entries = (jsonRes as Map).entries.toList();
-
-        for (final elem in entries) {
+        for (final element in (jsonRes as Map).entries.toList()) {
           progressiveUrls.add(
             VideoQalityUrl(
               quality: 720,
-              url: elem.value['url'] as String,
+              url: element.value['url'] as String,
             ),
           );
           break;
@@ -86,7 +90,7 @@ class Tivy {
   /// Example:
   /// ```dart
   ///  final videoQualityUrls = await tivy.getPrivateVimeoVideoQualityUrls(
-  ///    'https://vimeo.com/663563090',
+  ///    '663563090',
   ///    {
   ///      'key': 'value',
   ///    },
@@ -204,6 +208,37 @@ class Tivy {
       return http.get(
         Uri.parse('https://player.vimeo.com/video/$videoId/config?h=$hash'),
       );
+    }
+  }
+
+  /// Get `vimeo` vide information from url.
+  ///
+  /// `url` - Vimeo video url
+  Future<VimeoVideo> getVimeoVideoInfo(String url) async {
+    try {
+      final response = await http.get(
+        Uri.parse(
+          'https://vimeo.com/api/oembed.json?url=$url',
+        ),
+      );
+
+      final jsonData = jsonDecode(response.body);
+
+      return VimeoVideo(
+        videoId: '${jsonData['video_id'] as int}',
+        uri: jsonData['uri'] as String,
+        duration: jsonData['video_id'] as int? ?? 0,
+        width: jsonData['width'] as int? ?? 0,
+        height: jsonData['height'] as int? ?? 0,
+        thumbnailUrl: jsonData['thumbnail_url'] as String,
+        thumbnailUrlWithPlayButton:
+            jsonData['thumbnail_url_with_play_button'] as String,
+        thumbnailHeight: jsonData['thumbnail_height'] as int? ?? 0,
+        thumbnailWidth: jsonData['thumbnail_width'] as int? ?? 0,
+      );
+    } catch (error) {
+      debugPrint('===== VIMEO INFO API ERROR: $error ==========');
+      rethrow;
     }
   }
 }
