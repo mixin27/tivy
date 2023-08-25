@@ -4,7 +4,7 @@
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
-Utility package for getting video information of YouTube and Vimeo video urls.
+Utility package for getting video quality urls for vimeo and youtube.
 
 ## Installation 💻
 
