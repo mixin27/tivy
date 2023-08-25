@@ -43,11 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _getData() async {
     final videoInfo = await tivy.getVimeoVideoInfo(
-      'https://vimeo.com/663562890',
+      'your_vimeo_video_url',
     );
 
     final result = await tivy.getVimeoVideoQualityUrls(
-      'https://vimeo.com/663562890',
+      'your_vimeo_video_url',
     );
     setState(() {
       _videoInfo = videoInfo;
