@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Tivy Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -33,7 +34,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<VideoQalityUrl> _videoUrls = [];
-  VimeoVideo? _videoInfo;
 
   @override
   void initState() {
@@ -42,15 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _getData() async {
-    final videoInfo = await tivy.getVimeoVideoInfo(
-      'your_vimeo_video_url',
+    final result = await tivy.getYouTubeVideoQualityUrls(
+      'https://www.youtube.com/watch?v=_EYk-E29edo',
     );
 
-    final result = await tivy.getVimeoVideoQualityUrls(
-      'your_vimeo_video_url',
-    );
     setState(() {
-      _videoInfo = videoInfo;
       _videoUrls = result;
     });
   }
@@ -63,21 +59,18 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          if (_videoInfo != null) ...[
-            Container(
-              alignment: Alignment.centerLeft,
-              padding: const EdgeInsets.all(16),
-              child: Text(
-                "URI : ${_videoInfo!.uri}",
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
+          Container(
+            alignment: Alignment.centerLeft,
+            padding: const EdgeInsets.all(16),
+            child: Text(
+              "URI : https://www.youtube.com/watch?v=_EYk-E29edo",
+              style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                    fontSize: 15,
+                  ),
             ),
-            const SizedBox(height: 10),
-            Image.network(_videoInfo!.thumbnailUrl),
-            const SizedBox(height: 10),
-          ],
+          ),
           Text(
-            "Quality",
+            "Video Quality Links",
             style: Theme.of(context).textTheme.headlineSmall,
           ),
           Expanded(
@@ -89,6 +82,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     itemBuilder: (context, index) {
                       final videoUrl = _videoUrls[index];
                       return ListTile(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => LinkDetailPage(
+                                title: '${videoUrl.quality}p',
+                                link: videoUrl.url,
+                              ),
+                            ),
+                          );
+                        },
                         title: Text(videoUrl.quality.toString()),
                         subtitle: Text(
                           videoUrl.url,
@@ -102,6 +105,33 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class LinkDetailPage extends StatelessWidget {
+  const LinkDetailPage({
+    super.key,
+    required this.title,
+    required this.link,
+  });
+
+  final String title;
+  final String link;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Text(
+          link,
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
       ),
     );
   }

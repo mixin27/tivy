@@ -37,7 +37,7 @@ flutter packages get
 
   ```dart
   final videoQualityUrls = await tivy.getVideoQualityUrls(
-    'https://vimeo.com/663563090',
+    'your_vimeo_video_url',
   );
   ```
 
@@ -45,7 +45,7 @@ flutter packages get
 
   ```dart
   final videoQualityUrls = await tivy.getVideoQualityUrls(
-    '663563090',
+    'your_vimeo_video_id',
   );
   ```
 
@@ -53,7 +53,7 @@ flutter packages get
 
   ```dart
   final videoQualityUrls = await tivy.getPrivateVimeoVideoQualityUrls(
-    '663563090',
+    'your_private_vimeo_video_id',
     {
       'key': 'value',
     },
@@ -64,7 +64,7 @@ flutter packages get
 
   ```dart
   final videoQualityUrls = await tivy.getYouTubeVideoQualityUrls(
-    'https://www.youtube.com/watch?v=CRLPsOl4AAA',
+    'your_youtube_video_url',
   );
   ```
 
@@ -72,7 +72,7 @@ flutter packages get
 
   ```dart
   final videoQualityUrls = await tivy.getYouTubeVideoQualityUrls(
-    'https://www.youtube.com/watch?v=CRLPsOl4AAA',
+    'your_youtube_video_url',
     live: true,
   );
   ```
