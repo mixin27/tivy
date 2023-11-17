@@ -15,7 +15,7 @@ const tivy = Tivy();
 /// Utility package for getting video quality urls for vimeo and youtube.
 /// {@endtemplate}
 class Tivy {
-  /// {@macro}
+  /// {@macro tivy}
   const Tivy();
 
   /// Get `Vimeo` video quality urls.

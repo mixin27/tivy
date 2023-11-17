@@ -1,8 +1,10 @@
 import 'package:equatable/equatable.dart';
 
+/// {@template VimeoVideo}
 /// Vimeo video info model
+/// {@endtemplate}
 class VimeoVideo extends Equatable {
-  /// {@macro}
+  /// {@macro VimeoVideo}
   const VimeoVideo({
     required this.videoId,
     required this.uri,
