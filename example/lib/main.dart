@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:tivy/tivy.dart';
 
@@ -33,34 +35,59 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<VideoQalityUrl> _youtubeVideoUrls = [];
-  List<VideoQalityUrl> _vimeoVideoUrls = [];
+  List<VideoQualityUrl> _youtubeVideoUrls = [];
+  List<VideoQualityUrl> _vimeoVideoUrls = [];
+  VimeoVideoInfo? _vimeoVideoInfo;
+
+  String? _error;
 
   @override
   void initState() {
+    _getVimeoVideoInfo();
     _getYouTubeData();
     _getVimeoData();
     super.initState();
   }
 
+  _getVimeoVideoInfo() async {
+    try {
+      final result =
+          await Tivy.getVimeoVideoInfo('https://vimeo.com/989554278');
+      setState(() {
+        _vimeoVideoInfo = result;
+      });
+    } catch (e) {
+      log('Error: $e');
+    }
+  }
+
+  // 'https://www.youtube.com/watch?v=HcL5pbYV0go&list=RDAtQq2BAcVkE'
   _getYouTubeData() async {
-    final ytResult = await tivy.getYouTubeVideoQualityUrls(
-      'https://www.youtube.com/watch?v=_EYk-E29edo',
+    final ytResult = await Tivy.getYouTubeVideoQualityUrls(
+      'https://www.youtube.com/embed/wNT0Hm5bfiQ',
     );
 
     setState(() {
-      _youtubeVideoUrls = ytResult;
+      _youtubeVideoUrls = ytResult.muxedUrls;
     });
   }
 
   _getVimeoData() async {
-    final vimeoResult = await tivy.getVimeoVideoQualityUrls(
-      'https://vimeo.com/6718739',
-    );
-
-    setState(() {
-      _vimeoVideoUrls = vimeoResult;
-    });
+    try {
+      final vimeoResult = await Tivy.getVimeoVideoQualityUrls(
+        '989554278',
+        accessToken: 'your_vimeo_access_token',
+      );
+      log('vimeoUrls: $vimeoResult');
+      setState(() {
+        _vimeoVideoUrls = vimeoResult;
+      });
+    } catch (error) {
+      setState(() {
+        _vimeoVideoUrls = [];
+        _error = '===== VIMEO API ERROR ==========';
+      });
+    }
   }
 
   @override
@@ -88,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             _youtubeVideoUrls.isEmpty
                 ? const Center(
-                    child: CircularProgressIndicator(),
+                    child: Text("No links"),
                   )
                 : ListView.separated(
                     primary: false,
@@ -128,13 +155,22 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
               ),
             ),
-            Text(
-              "Vimeo Video Quality Links",
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
-            _vimeoVideoUrls.isEmpty
+            if (_vimeoVideoInfo != null) ...[
+              Text(_vimeoVideoInfo?.html ?? 'unknown html'),
+              const SizedBox(height: 10),
+            ],
+            if (_error != null)
+              Center(
+                child: Text(_error ?? 'Error'),
+              ),
+            if (_error == null)
+              Text(
+                "Vimeo Video Quality Links",
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+            _vimeoVideoUrls.isEmpty && _error == null
                 ? const Center(
-                    child: CircularProgressIndicator(),
+                    child: Text("No video links"),
                   )
                 : ListView.separated(
                     primary: false,
