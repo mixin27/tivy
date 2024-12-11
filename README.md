@@ -34,48 +34,27 @@ flutter packages get
   import 'package:tivy/tivy.dart';
   ```
 
-- Use with vimeo video url
+- For vimeo video
 
   ```dart
-  final videoQualityUrls = await tivy.getVideoQualityUrls(
-    'your_vimeo_video_url',
-  );
-  ```
-
-- Use with vimeo video id
-
-  ```dart
-  final videoQualityUrls = await tivy.getVideoQualityUrls(
-    'your_vimeo_video_id',
-  );
-  ```
-
-- For vimeo private video
-
-  ```dart
-  final videoQualityUrls = await tivy.getPrivateVimeoVideoQualityUrls(
+  final videoQualityUrls = await Tivy.getVideoQualityUrls(
     'your_private_vimeo_video_id',
-    {
-      'key': 'value',
-    },
+    accessToken: 'your_access_token',
   );
   ```
 
 - For YouTube video url.
 
   ```dart
-  final videoQualityUrls = await tivy.getYouTubeVideoQualityUrls(
+  final youTubeVideoUrl = await Tivy.getYouTubeVideoQualityUrls(
     'your_youtube_video_url',
   );
-  ```
+  // Available muxed video links with audio and video
+  // Note that muxed streams are limited in quality.
+  final muxedUrls = youTubeVideoUrl.muxedUrls;
 
-- For YouTube live streaming video url.
-
-  ```dart
-  final videoQualityUrls = await tivy.getYouTubeVideoQualityUrls(
-    'your_youtube_video_url',
-    live: true,
-  );
+  // Available streams video links.
+  final streamsUrls = youTubeVideoUrl.streamUrls;
   ```
 
 [flutter_install_link]: https://docs.flutter.dev/get-started/install

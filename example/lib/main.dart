@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:tivy/tivy.dart';
 
@@ -33,22 +35,59 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<VideoQalityUrl> _videoUrls = [];
+  List<VideoQualityUrl> _youtubeVideoUrls = [];
+  List<VideoQualityUrl> _vimeoVideoUrls = [];
+  VimeoVideoInfo? _vimeoVideoInfo;
+
+  String? _error;
 
   @override
   void initState() {
-    _getData();
+    _getVimeoVideoInfo();
+    _getYouTubeData();
+    _getVimeoData();
     super.initState();
   }
 
-  _getData() async {
-    final result = await tivy.getYouTubeVideoQualityUrls(
-      'https://www.youtube.com/watch?v=_EYk-E29edo',
+  _getVimeoVideoInfo() async {
+    try {
+      final result =
+          await Tivy.getVimeoVideoInfo('https://vimeo.com/989554278');
+      setState(() {
+        _vimeoVideoInfo = result;
+      });
+    } catch (e) {
+      log('Error: $e');
+    }
+  }
+
+  // 'https://www.youtube.com/watch?v=HcL5pbYV0go&list=RDAtQq2BAcVkE'
+  _getYouTubeData() async {
+    final ytResult = await Tivy.getYouTubeVideoQualityUrls(
+      'https://www.youtube.com/embed/wNT0Hm5bfiQ',
     );
 
     setState(() {
-      _videoUrls = result;
+      _youtubeVideoUrls = ytResult.muxedUrls;
     });
+  }
+
+  _getVimeoData() async {
+    try {
+      final vimeoResult = await Tivy.getVimeoVideoQualityUrls(
+        '989554278',
+        accessToken: 'your_vimeo_access_token',
+      );
+      log('vimeoUrls: $vimeoResult');
+      setState(() {
+        _vimeoVideoUrls = vimeoResult;
+      });
+    } catch (error) {
+      setState(() {
+        _vimeoVideoUrls = [];
+        _error = '===== VIMEO API ERROR ==========';
+      });
+    }
   }
 
   @override
@@ -57,30 +96,32 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: [
-          Container(
-            alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.all(16),
-            child: Text(
-              "URI : https://www.youtube.com/watch?v=_EYk-E29edo",
-              style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                    fontSize: 15,
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              alignment: Alignment.centerLeft,
+              padding: const EdgeInsets.all(16),
+              child: Text(
+                "YouTube URI : https://www.youtube.com/watch?v=_EYk-E29edo",
+                style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                      fontSize: 15,
+                    ),
+              ),
             ),
-          ),
-          Text(
-            "Video Quality Links",
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
-          Expanded(
-            child: _videoUrls.isEmpty
+            Text(
+              "YouTube Video Quality Links",
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            _youtubeVideoUrls.isEmpty
                 ? const Center(
-                    child: CircularProgressIndicator(),
+                    child: Text("No links"),
                   )
                 : ListView.separated(
+                    primary: false,
+                    shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      final videoUrl = _videoUrls[index];
+                      final videoUrl = _youtubeVideoUrls[index];
                       return ListTile(
                         onTap: () {
                           Navigator.of(context).push(
@@ -101,10 +142,65 @@ class _MyHomePageState extends State<MyHomePage> {
                       );
                     },
                     separatorBuilder: (_, __) => const Divider(),
-                    itemCount: _videoUrls.length,
+                    itemCount: _youtubeVideoUrls.length,
                   ),
-          ),
-        ],
+            const SizedBox(height: 20),
+            Container(
+              alignment: Alignment.centerLeft,
+              padding: const EdgeInsets.all(16),
+              child: Text(
+                "Vimeo URI : https://vimeo.com/6718739",
+                style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                      fontSize: 15,
+                    ),
+              ),
+            ),
+            if (_vimeoVideoInfo != null) ...[
+              Text(_vimeoVideoInfo?.html ?? 'unknown html'),
+              const SizedBox(height: 10),
+            ],
+            if (_error != null)
+              Center(
+                child: Text(_error ?? 'Error'),
+              ),
+            if (_error == null)
+              Text(
+                "Vimeo Video Quality Links",
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+            _vimeoVideoUrls.isEmpty && _error == null
+                ? const Center(
+                    child: Text("No video links"),
+                  )
+                : ListView.separated(
+                    primary: false,
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      final videoUrl = _vimeoVideoUrls[index];
+                      return ListTile(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => LinkDetailPage(
+                                title: '${videoUrl.quality}p',
+                                link: videoUrl.url,
+                              ),
+                            ),
+                          );
+                        },
+                        title: Text(videoUrl.quality.toString()),
+                        subtitle: Text(
+                          videoUrl.url,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      );
+                    },
+                    separatorBuilder: (_, __) => const Divider(),
+                    itemCount: _vimeoVideoUrls.length,
+                  ),
+          ],
+        ),
       ),
     );
   }

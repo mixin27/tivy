@@ -3,3 +3,4 @@ library tivy;
 
 export 'src/models/models.dart';
 export 'src/tivy.dart';
+export 'src/utls/result.dart';

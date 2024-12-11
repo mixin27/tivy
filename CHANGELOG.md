@@ -1,3 +1,11 @@
+## 1.0.0
+
+> **BREAKING CHANGES**
+
+- Make static class `Tivy`
+- Now, vimeo video data can be fetched by `accessToken` due to `vimeo` team remove unofficial api endpoint `config`.
+- Fixed YouTue video urls cannot be retrieved.
+
 ## 0.1.1
 
 - Update readme and example.
