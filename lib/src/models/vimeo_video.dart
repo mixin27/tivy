@@ -22,19 +22,19 @@ class VimeoVideoInfo extends Equatable {
   });
 
   factory VimeoVideoInfo.fromJson(Map<String, dynamic> json) => VimeoVideoInfo(
-        videoId: (json['videoId'] as int? ?? 0).toString(),
-        uri: json['uri'] as String? ?? '',
-        duration: json['duration'] as int? ?? 0,
-        width: json['width'] as int? ?? 0,
-        height: json['height'] as int? ?? 0,
-        thumbnailUrl: json['thumbnailUrl'] as String? ?? '',
-        thumbnailUrlWithPlayButton:
-            json['thumbnailUrlWithPlayButton'] as String? ?? '',
-        thumbnailHeight: json['thumbnailHeight'] as int? ?? 0,
-        thumbnailWidth: json['thumbnailWidth'] as int? ?? 0,
-        html: json['html'] as String? ?? '',
-        title: json['title'] as String? ?? '',
-      );
+    videoId: (json['videoId'] as int? ?? 0).toString(),
+    uri: json['uri'] as String? ?? '',
+    duration: json['duration'] as int? ?? 0,
+    width: json['width'] as int? ?? 0,
+    height: json['height'] as int? ?? 0,
+    thumbnailUrl: json['thumbnailUrl'] as String? ?? '',
+    thumbnailUrlWithPlayButton:
+        json['thumbnailUrlWithPlayButton'] as String? ?? '',
+    thumbnailHeight: json['thumbnailHeight'] as int? ?? 0,
+    thumbnailWidth: json['thumbnailWidth'] as int? ?? 0,
+    html: json['html'] as String? ?? '',
+    title: json['title'] as String? ?? '',
+  );
 
   /// Video id
   final String videoId;
@@ -71,14 +71,14 @@ class VimeoVideoInfo extends Equatable {
 
   @override
   List<Object?> get props => [
-        videoId,
-        uri,
-        duration,
-        width,
-        height,
-        thumbnailUrl,
-        thumbnailUrlWithPlayButton,
-        thumbnailHeight,
-        thumbnailWidth,
-      ];
+    videoId,
+    uri,
+    duration,
+    width,
+    height,
+    thumbnailUrl,
+    thumbnailUrlWithPlayButton,
+    thumbnailHeight,
+    thumbnailWidth,
+  ];
 }

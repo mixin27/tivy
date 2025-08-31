@@ -6,9 +6,8 @@ import 'package:tivy/src/utls/result.dart';
 /// {@macro VimeoRepository}
 class VimeoRepositoryImpl implements VimeoRepository {
   /// {@macro VimeoRepository}
-  VimeoRepositoryImpl({
-    required VimeoApiClient apiClient,
-  }) : _apiClient = apiClient;
+  VimeoRepositoryImpl({required VimeoApiClient apiClient})
+    : _apiClient = apiClient;
 
   /// Vimeo api client
   final VimeoApiClient _apiClient;

@@ -17,12 +17,14 @@ import 'package:tivy/src/utls/result.dart';
 /// {@endtemplate}
 class Tivy {
   /// Repository for getting `Vimeo` videos.
-  static VimeoRepository vimeoRepository =
-      VimeoRepositoryImpl(apiClient: VimeoApiClient());
+  static VimeoRepository vimeoRepository = VimeoRepositoryImpl(
+    apiClient: VimeoApiClient(),
+  );
 
   /// Repository for getting `YouTube` videos.
-  static YoutubeRepository youtubeRepository =
-      YoutubeRepositoryImpl(apiClient: const YoutubeApiClient());
+  static YoutubeRepository youtubeRepository = YoutubeRepositoryImpl(
+    apiClient: const YoutubeApiClient(),
+  );
 
   /// Get `vimeo` vide information from url.
   ///
@@ -46,9 +48,7 @@ class Tivy {
     final repository = VimeoRepositoryImpl(apiClient: VimeoApiClient());
     final result = await repository.getVimeoVideoQualityUrls(
       videoId,
-      httpHeader: {
-        HttpHeaders.authorizationHeader: 'Bearer $accessToken',
-      },
+      httpHeader: {HttpHeaders.authorizationHeader: 'Bearer $accessToken'},
     );
     switch (result) {
       case Ok():
@@ -64,10 +64,13 @@ class Tivy {
     String idOrUrl, {
     bool live = false,
   }) async {
-    final repository =
-        YoutubeRepositoryImpl(apiClient: const YoutubeApiClient());
-    final result =
-        await repository.getYouTubeVideoQualityUrls(idOrUrl, live: live);
+    final repository = YoutubeRepositoryImpl(
+      apiClient: const YoutubeApiClient(),
+    );
+    final result = await repository.getYouTubeVideoQualityUrls(
+      idOrUrl,
+      live: live,
+    );
     switch (result) {
       case Ok():
         return result.asOk.value;
