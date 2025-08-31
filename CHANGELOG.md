@@ -1,5 +1,9 @@
 ## 1.0.0
 
+- Dependencies update
+
+## 1.0.0
+
 > **BREAKING CHANGES**
 
 - Make static class `Tivy`
