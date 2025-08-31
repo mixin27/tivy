@@ -37,12 +37,7 @@ class YoutubeApiClient {
         final url = await yt.videos.streamsClient.getHttpLiveStreamUrl(
           yted.VideoId(idOrUrl),
         );
-        muxedUrls.add(
-          VideoQualityUrl(
-            quality: 360,
-            url: url,
-          ),
-        );
+        muxedUrls.add(VideoQualityUrl(quality: 360, url: url));
       } else {
         final manifest = await yt.videos.streamsClient.getManifest(
           idOrUrl,
@@ -57,33 +52,26 @@ class YoutubeApiClient {
         );
 
         muxedUrls.addAll(
-          manifest.muxed.map(
-            (element) {
-              return VideoQualityUrl(
-                quality: int.tryParse(element.qualityLabel.split('p')[0]) ?? 0,
-                url: element.url.toString(),
-              );
-            },
-          ),
+          manifest.muxed.map((element) {
+            return VideoQualityUrl(
+              quality: int.tryParse(element.qualityLabel.split('p')[0]) ?? 0,
+              url: element.url.toString(),
+            );
+          }),
         );
 
         streamsUrls.addAll(
-          manifest.streams.map(
-            (element) {
-              return VideoQualityUrl(
-                quality: int.tryParse(element.qualityLabel.split('p')[0]) ?? 0,
-                url: element.url.toString(),
-              );
-            },
-          ),
+          manifest.streams.map((element) {
+            return VideoQualityUrl(
+              quality: int.tryParse(element.qualityLabel.split('p')[0]) ?? 0,
+              url: element.url.toString(),
+            );
+          }),
         );
       }
 
       return Result.ok(
-        YouTubeVideoUrl(
-          muxedUrls: muxedUrls,
-          streamUrls: streamsUrls,
-        ),
+        YouTubeVideoUrl(muxedUrls: muxedUrls, streamUrls: streamsUrls),
       );
     } on Exception catch (error) {
       return Result.error(error);

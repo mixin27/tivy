@@ -6,9 +6,8 @@ import 'package:tivy/src/utls/result.dart';
 /// {@macro YoutubeRepository}
 class YoutubeRepositoryImpl implements YoutubeRepository {
   /// {@macro YoutubeRepository}
-  YoutubeRepositoryImpl({
-    required YoutubeApiClient apiClient,
-  }) : _apiClient = apiClient;
+  YoutubeRepositoryImpl({required YoutubeApiClient apiClient})
+    : _apiClient = apiClient;
 
   /// Youtube api client
   final YoutubeApiClient _apiClient;
@@ -25,8 +24,10 @@ class YoutubeRepositoryImpl implements YoutubeRepository {
   }) async {
     if (!_cachedData.containsKey(idOrUrl)) {
       // No cached data, request api
-      final result =
-          await _apiClient.getYouTubeVideoQualityUrls(idOrUrl, live: live);
+      final result = await _apiClient.getYouTubeVideoQualityUrls(
+        idOrUrl,
+        live: live,
+      );
       if (result is Ok) {
         _cachedData[idOrUrl] = result.asOk.value;
       }

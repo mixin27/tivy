@@ -10,9 +10,8 @@ import 'package:tivy/src/utls/result.dart';
 /// Api client for `vimeo` videos
 class VimeoApiClient {
   /// [VimeoApiClient] constructor.
-  VimeoApiClient({
-    http.Client Function()? clientFactory,
-  }) : _clientFactory = clientFactory ?? http.Client.new;
+  VimeoApiClient({http.Client Function()? clientFactory})
+    : _clientFactory = clientFactory ?? http.Client.new;
 
   final http.Client Function() _clientFactory;
 
@@ -87,10 +86,7 @@ class VimeoApiClient {
           final number = int.tryParse(quality);
           if (number != null && number != 0) {
             list.add(
-              VideoQualityUrl(
-                quality: number,
-                url: files[i]['link'] as String,
-              ),
+              VideoQualityUrl(quality: number, url: files[i]['link'] as String),
             );
           }
         }

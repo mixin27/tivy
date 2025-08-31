@@ -5,10 +5,7 @@ import 'package:equatable/equatable.dart';
 /// {@endtemplate}
 class YouTubeVideoUrl extends Equatable {
   /// {@macro YouTubeVideoUrl}
-  const YouTubeVideoUrl({
-    required this.muxedUrls,
-    required this.streamUrls,
-  });
+  const YouTubeVideoUrl({required this.muxedUrls, required this.streamUrls});
 
   /// `muxed` video urls
   final List<VideoQualityUrl> muxedUrls;
@@ -28,10 +25,7 @@ class YouTubeVideoUrl extends Equatable {
 /// {@endtemplate}
 class VideoQualityUrl extends Equatable {
   /// {@macro VideoQualityUrl}
-  const VideoQualityUrl({
-    required this.quality,
-    required this.url,
-  });
+  const VideoQualityUrl({required this.quality, required this.url});
 
   /// Video quality.
   final int quality;
