@@ -1,0 +1,1787 @@
+{
+    "allow_multiple_review_links": "boolean",
+    "allowed_privacies": [
+        "string"
+    ],
+    "app": [
+        {
+            "capabilities": [],
+            "name": "Vimeo Android",
+            "uri": "/apps/12345"
+        }
+    ],
+    "can_move_to_project": "boolean",
+    "categories": [
+        {
+            "icon": {
+                "active": true,
+                "base_link": "https://i.vimeocdn.com/video/1130929417-276se668248611ce41e6f7d438196e3412863bad9a5c3bcaf1a14453454cc5-d",
+                "default_picture": false,
+                "link": "string",
+                "resource_key": "dc724af18fbdd4e59189f5fe768a5f8311527050",
+                "sizes": [
+                    {
+                        "height": 720,
+                        "link": "https://i.vimeocdn.com/video/581495283_1280x720?r=pad&subrect=0,12,21,22&r=cover",
+                        "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F581495283_1280x720&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png",
+                        "width": 1280
+                    }
+                ],
+                "type": "caution",
+                "uri": "/users/152184/pictures/12345"
+            },
+            "is_deprecated": false,
+            "last_video_featured_time": "2017-05-17T17:46:09+00:00",
+            "link": "https://vimeo.com/categories/animation",
+            "metadata": {
+                "connections": {
+                    "channels": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 90,
+                        "uri": "/categories/animation/channels"
+                    },
+                    "groups": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 15,
+                        "uri": "/categories/animation/groups"
+                    },
+                    "users": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 140,
+                        "uri": "/categories/animation/videos"
+                    },
+                    "videos": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 960,
+                        "uri": "/categories/animation/videos"
+                    }
+                },
+                "interactions": {
+                    "follow": {
+                        "added": true,
+                        "added_time": "2017-05-17T17:46:09+00:00",
+                        "uri": "/users/152184/categories/animation"
+                    }
+                }
+            },
+            "name": "Animation",
+            "parent": {
+                "link": "https://vimeo.com/categories/animation",
+                "name": "Animation",
+                "uri": "/categories/animation"
+            },
+            "pictures": {
+                "active": true,
+                "base_link": "https://i.vimeocdn.com/video/1130929417-276se668248611ce41e6f7d438196e3412863bad9a5c3bcaf1a14453454cc5-d",
+                "default_picture": false,
+                "link": "string",
+                "resource_key": "dc724af18fbdd4e59189f5fe768a5f8311527050",
+                "sizes": [
+                    {
+                        "height": 720,
+                        "link": "https://i.vimeocdn.com/video/581495283_1280x720?r=pad&subrect=0,12,21,22&r=cover",
+                        "link_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F581495283_1280x720&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png",
+                        "width": 1280
+                    }
+                ],
+                "type": "caution",
+                "uri": "/users/152184/pictures/12345"
+            },
+            "resource_key": "e5595241643259c658ed6c85ca82985a6341edc7",
+            "subcategories": [
+                {
+                    "link": "https://vimeo.com/categories/animation/2d/videos",
+                    "name": "2D",
+                    "uri": "/categories/animation/subcategories/2d"
+                }
+            ],
+            "top_level": true,
+            "uri": "/categories/animation"
+        }
+    ],
+    "content_rating": [],
+    "content_rating_class": "explicit",
+    "context": {
+        "action": "Added to",
+        "resource": [],
+        "resource_type": "clip"
+    },
+    "created_time": "2018-03-05T21:04:47+00:00",
+    "custom_url": "string",
+    "description": "A celebration of 10 years of Staff Picks.",
+    "description_html": "<p>A celebration of <b>10 years</b> of Staff Picks.</p>",
+    "description_rich": "{\"ops\":[{\"insert\": \"Text\"}]}",
+    "download": {
+        "codec": "AV1",
+        "created_time": "2017-05-16T15:41:36+00:00",
+        "expires": "2017-05-17T15:41:00+00:00",
+        "fps": 30,
+        "height": 1080,
+        "link": "https://player.vimeo.com/play/965853365?s=258684937_1537148280_a749040a9205",
+        "log": {
+            "play": "https://api.vimeo.com/videos/258684937/stats/play/ts/1537137531:d8a2bbf8617cf/887133875"
+        },
+        "md5": "1bc29b36f623ba82aaf6724fd3b16718",
+        "public_name": "HD 720p",
+        "quality": "hd",
+        "rendition": "1080p",
+        "size": 9932503,
+        "size_short": "17.89MB",
+        "source_link": "https://player.vimeo.com/source/965853365?s=258684937",
+        "type": "source",
+        "width": 1920
+    },
+    "duration": 81,
+    "edit_session": [
+        {
+            "has_watermark": "boolean",
+            "is_edited_by_tve": "boolean",
+            "is_max_resolution": "boolean",
+            "is_music_licensed": "boolean",
+            "is_rated": false,
+            "min_tier_for_movie": "string",
+            "result_video_hash": "string",
+            "status": "done",
+            "upload_attempt_id_version_uri": "/videos/258684937/versions/12345",
+            "version_uri": "/videos/258684937/versions/12345",
+            "vsid": "number"
+        }
+    ],
+    "embed": [
+        {
+            "airplay": true,
+            "ask_ai": true,
+            "audio_tracks": true,
+            "autopip": true,
+            "badges": {
+                "dolby_vision": "boolean",
+                "hdr": true,
+                "hdr_10": "boolean",
+                "hdr_10_plus": "boolean",
+                "live": {
+                    "archived": false,
+                    "streaming": true
+                },
+                "ott_4k": true,
+                "ott_5_1_audio": true,
+                "ott_hevc": true,
+                "staff_pick": {
+                    "best_of_the_month": false,
+                    "best_of_the_year": false,
+                    "normal": true,
+                    "premiere": false
+                },
+                "stereo_spatial": "boolean",
+                "vod": false,
+                "weekend_challenge": false
+            },
+            "buttons": {
+                "embed": true,
+                "fullscreen": true,
+                "hd": true,
+                "like": true,
+                "reaction": true,
+                "scaling": true,
+                "share": true,
+                "watchlater": true
+            },
+            "cards": [
+                {
+                    "display_time": "number",
+                    "headline": "string",
+                    "id": "string",
+                    "image_url": "string",
+                    "teaser": "string",
+                    "timecode": "number",
+                    "url": "string"
+                }
+            ],
+            "chapters": true,
+            "chromecast": true,
+            "closed_captions": true,
+            "color": "#0a0808",
+            "colors": {
+                "color_four": "#aabbcc",
+                "color_one": "#112233",
+                "color_three": "#778899",
+                "color_two": "#445566"
+            },
+            "email_capture_form": [],
+            "end_screen": {
+                "type": "empty"
+            },
+            "event_schedule": true,
+            "has_cards": true,
+            "html": "string",
+            "interactive": true,
+            "logos": {
+                "custom": {
+                    "active": true,
+                    "link": "http://example.com",
+                    "sticky": true,
+                    "url": "http://example.com",
+                    "use_link": true
+                },
+                "vimeo": true
+            },
+            "outro_type": "link",
+            "pip": true,
+            "play_button": {
+                "position": "auto"
+            },
+            "playbar": true,
+            "quality_selector": true,
+            "show_timezone": false,
+            "skipping_forward": true,
+            "speed": true,
+            "title": {
+                "name": "hide",
+                "owner": "hide",
+                "portrait": "hide"
+            },
+            "transcript": true,
+            "uri": "/videos/258684937/presets/12345",
+            "volume": true
+        }
+    ],
+    "explicit_access_summary": {
+        "all_team_count": 1,
+        "team_group_count": 3,
+        "team_user_count": 5
+    },
+    "files": {
+        "codec": "AV1",
+        "created_time": "2017-05-16T15:41:36+00:00",
+        "expires": "2017-05-17T15:41:00+00:00",
+        "fps": 30,
+        "height": 1080,
+        "link": "https://player.vimeo.com/play/965853365?s=258684937_1537148280_a749040a9205",
+        "log": {
+            "play": "https://api.vimeo.com/videos/258684937/stats/play/ts/1537137531:d8a2bbf8617cf/887133875"
+        },
+        "md5": "1bc29b36f623ba82aaf6724fd3b16718",
+        "public_name": "HD 720p",
+        "quality": "hd",
+        "rendition": "1080p",
+        "size": 9932503,
+        "size_short": "17.89MB",
+        "source_link": "https://player.vimeo.com/source/965853365?s=258684937",
+        "type": "source",
+        "width": 1920
+    },
+    "files_size": {
+        "file_size_type": "Upload",
+        "num_versions": 2,
+        "total_size": 132414
+    },
+    "has_audio": "boolean",
+    "has_audio_tracks": "boolean",
+    "has_chapters": "boolean",
+    "has_interactive": false,
+    "has_text_tracks": "boolean",
+    "height": 1080,
+    "is_cold_storage": "boolean",
+    "is_copyright_restricted": "boolean",
+    "is_free": true,
+    "is_playable": "boolean",
+    "language": "en-US",
+    "last_user_action_event_date": "2018-03-21T23:08:22+00:00",
+    "license": "by",
+    "link": "https://vimeo.com/258684937",
+    "manage_link": "/manage/videos/258684937",
+    "metadata": {
+        "ai_content": {
+            "audio": true,
+            "audio_auto": true,
+            "visual": false,
+            "visual_auto": false
+        },
+        "can_be_replaced": true,
+        "connections": {
+            "ancestor_path": [
+                {
+                    "link": "string",
+                    "name": "string"
+                }
+            ],
+            "available_channels": {
+                "options": [
+                    "string"
+                ],
+                "total": 14,
+                "uri": "/videos/258684937/videos/available_channels"
+            },
+            "comments": {
+                "options": [
+                    "string"
+                ],
+                "total": 14,
+                "uri": "/videos/258684937/comments"
+            },
+            "credits": {
+                "options": [
+                    "string"
+                ],
+                "total": 4,
+                "uri": "/videos/258684937/credits"
+            },
+            "likes": {
+                "options": [
+                    "string"
+                ],
+                "total": 230,
+                "uri": "/videos/258684937/likes"
+            },
+            "ondemand": {
+                "options": [
+                    "string"
+                ],
+                "resource_key": "bac1033deba2310ebba2caec33c23e4beea67aba",
+                "uri": "/ondemand/pages/61326"
+            },
+            "pictures": {
+                "options": [
+                    "string"
+                ],
+                "total": 1,
+                "uri": "/videos/258684937/pictures"
+            },
+            "recommendations": {
+                "options": [
+                    "string"
+                ],
+                "resource_signature": "string",
+                "uri": "/videos/258684937/recommendations"
+            },
+            "related": {
+                "options": [
+                    "string"
+                ],
+                "uri": "/videos/258684937?offset=10"
+            },
+            "resource_creator_team_user": {
+                "uri": "string"
+            },
+            "season": {
+                "name": "Season 1",
+                "options": [
+                    "string"
+                ],
+                "uri": "/ondemand/pages/61326/season/12345"
+            },
+            "team_permissions": {
+                "options": [
+                    "string"
+                ]
+            },
+            "texttracks": {
+                "options": [
+                    "string"
+                ],
+                "total": 2,
+                "uri": "/videos/258684937/texttracks"
+            },
+            "trailer": {
+                "options": [
+                    "string"
+                ],
+                "resource_key": "bac1033deba2310ebba2caec33c23e4beea67aba",
+                "uri": "/ondemand/pages/61326/videos/12345"
+            },
+            "users_with_access": {
+                "options": [
+                    "string"
+                ],
+                "total": 8,
+                "uri": "/videos/258684937/privacy/users"
+            },
+            "versions": {
+                "create_storyboard_id": "storyboard_123456_1000",
+                "current_uri": "/videos/258684937/versions/12345",
+                "has_interactive": false,
+                "options": [
+                    "string"
+                ],
+                "origin_variable_frame_resolution": false,
+                "resource_key": "bac1033deba2310ebba2caec33c23e4beea67aba",
+                "sequence_number": 1,
+                "total": 3,
+                "total_including_deleted": 3,
+                "uri": "/videos/258684937/versions"
+            }
+        },
+        "edit_session_vsid": 12345,
+        "has_chapter_suggestions": true,
+        "has_email_capture": true,
+        "has_interactive_quiz": "boolean",
+        "interactions": {
+            "album": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "ask_ai": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "ask_ai_manager": {
+                "disabled": "boolean",
+                "options": [
+                    "string"
+                ],
+                "reason": "transcript_ready_but_not_english",
+                "uri": "string"
+            },
+            "ask_ai_viewer": {
+                "disabled": "boolean",
+                "options": [
+                    "string"
+                ],
+                "reason": "transcript_ready_but_not_english",
+                "uri": "string"
+            },
+            "buy": {
+                "currency": "USD",
+                "display_price": "5.99",
+                "download": "available",
+                "drm": true,
+                "link": "https://vimeo.com/ondemand/darbyforever",
+                "price": 5.99,
+                "purchase_time": "2018-03-05T21:04:47+00:00",
+                "stream": "available",
+                "uri": "/ondemand/pages/61326/products/12345"
+            },
+            "can_comment": "boolean",
+            "can_request_team_role_upgrade": {
+                "options": [
+                    "string"
+                ],
+                "properties": {
+                    "folder_uri": {
+                        "required": "boolean",
+                        "value": "string"
+                    },
+                    "status": {
+                        "required": "boolean",
+                        "value": "string"
+                    },
+                    "upgrade_to_role": {
+                        "required": "boolean",
+                        "value": "number"
+                    }
+                },
+                "uri": "string"
+            },
+            "can_update_privacy_to_public": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "channel": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "create_editor": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "delete": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "edit": {
+                "blocked_fields": [
+                    "string"
+                ],
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "edit_privacy": {
+                "content_rating": [
+                    "string"
+                ],
+                "options": [
+                    "string"
+                ],
+                "properties": [
+                    {
+                        "name": "string",
+                        "options": [
+                            "string"
+                        ],
+                        "required": "boolean"
+                    }
+                ],
+                "uri": "string"
+            },
+            "flag_clip": "boolean",
+            "has_restricted_privacy_options": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "highlights": {
+                "disabled": "boolean",
+                "options": [
+                    "string"
+                ],
+                "reason": "owner_disabled_feature_group",
+                "uri": "string"
+            },
+            "interact": "boolean",
+            "invite": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "legal_hold": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "like": {
+                "added": true,
+                "added_time": "string",
+                "options": [
+                    "string"
+                ],
+                "show_count": "boolean",
+                "uri": "string"
+            },
+            "lms_export": [],
+            "rent": {
+                "currency": "USD",
+                "display_price": "5.99",
+                "drm": true,
+                "expires_time": "2018-03-05T21:04:47+00:00",
+                "link": "https://vimeo.com/ondemand/darbyforever",
+                "price": 5.99,
+                "purchase_time": "2018-09-16T09:02:40+00:00",
+                "stream": "available",
+                "uri": "/ondemand/pages/61326/products/12345"
+            },
+            "report": {
+                "options": [
+                    "string"
+                ],
+                "reason": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "set_content_rating": {
+                "content_rating": [
+                    "string"
+                ],
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "subscribe": {
+                "drm": true,
+                "expires_time": "2018-03-05T21:04:47+00:00",
+                "purchase_time": "2018-03-02T21:04:47+00:00",
+                "stream": "purchased"
+            },
+            "summary": {
+                "disabled": "boolean",
+                "options": [
+                    "string"
+                ],
+                "reason": "owner_disabled_feature_group",
+                "uri": "string"
+            },
+            "text_translations": {
+                "disabled": "boolean",
+                "options": [
+                    "string"
+                ],
+                "reason": "owner_account_blocked",
+                "uri": "string"
+            },
+            "transcript_video_editor": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "translations": {
+                "disabled": "boolean",
+                "options": [
+                    "string"
+                ],
+                "reason": "language_not_supported",
+                "uri": "string"
+            },
+            "trim": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "validate": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "view_privacy": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "view_team_members": {
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "watched": {
+                "added": true,
+                "added_time": "string",
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            },
+            "watchlater": {
+                "added": true,
+                "added_time": "string",
+                "options": [
+                    "string"
+                ],
+                "uri": "string"
+            }
+        },
+        "is_screen_record": true,
+        "is_vimeo_create": true,
+        "is_zoom_upload": true
+    },
+    "modified_time": "2018-09-16T09:02:40+00:00",
+    "name": "Celebrating 10 Years of Staff Picks",
+    "origin_variable_frame_resolution": false,
+    "page": {
+        "ask_ai": true,
+        "categories": true,
+        "chapters": true,
+        "collections": true,
+        "comments": true,
+        "creative_commons": true,
+        "credits": true,
+        "date_added": true,
+        "description": true,
+        "download": true,
+        "like": true,
+        "owner": false,
+        "player": {
+            "airplay": true,
+            "audio_tracks": true,
+            "chromecast": true,
+            "closed_captions": true,
+            "colors": {
+                "color_four": "#00adef",
+                "color_one": "#00adef",
+                "color_three": "#000000",
+                "color_two": "#00adef"
+            },
+            "fullscreen": true,
+            "logos": {
+                "custom": {
+                    "active": true,
+                    "link": "http://example.com",
+                    "sticky": true,
+                    "url": "http://example.com",
+                    "use_link": true
+                },
+                "vimeo": true
+            },
+            "pip": true,
+            "play_button": {
+                "position": "auto"
+            },
+            "playbar": true,
+            "quality_selector": true,
+            "skipping_forward": true,
+            "speed": true,
+            "volume": true
+        },
+        "portrait": true,
+        "share": true,
+        "tags": true,
+        "title": true,
+        "transcript": true,
+        "uploader": true,
+        "uri": "/users/258684937/page_presets/12345",
+        "views": true,
+        "watch_later": true
+    },
+    "parent_folder": [
+        {
+            "access_grant": [],
+            "created_time": "2017-05-23T14:36:22+00:00",
+            "creator_uri": "/users/112233",
+            "has_subfolder": true,
+            "is_pinned": true,
+            "is_private_to_user": true,
+            "last_user_action_event_date": "2018-03-21T23:08:22+00:00",
+            "link": "https://vimeo.com/user/112233/folders/12345",
+            "manage_link": "https://vimeo.com/user/112233/folder/12345",
+            "metadata": {
+                "connections": {
+                    "ancestor_path": [
+                        {
+                            "can_upload": "boolean",
+                            "name": "string",
+                            "uri": "/users/112233/projects/12345"
+                        }
+                    ],
+                    "data_retention": {
+                        "policy": {
+                            "options": [
+                                "string"
+                            ],
+                            "title": "Policy title",
+                            "uri": "/teams/112233/data_retention/policies/12345"
+                        }
+                    },
+                    "folders": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 12,
+                        "uri": "/users/152184/projects/12345/items"
+                    },
+                    "group_folder_grants": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 5,
+                        "uri": "/users/152184/folders/98765/group_folder_grants"
+                    },
+                    "items": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 12,
+                        "uri": "/users/152184/projects/12345/items"
+                    },
+                    "parent_folder": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/12345/items"
+                    },
+                    "personal_team_folder_owner": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/112233"
+                    },
+                    "resource_creator_team_user": {
+                        "uri": "string"
+                    },
+                    "team_permissions": {
+                        "options": [
+                            "string"
+                        ]
+                    },
+                    "user_folder_access_grants": {
+                        "folder_permission_policies": [
+                            {
+                                "name": "Folder Viewer",
+                                "uri": "/users/152184/permission_policies/12345"
+                            }
+                        ],
+                        "options": [
+                            "string"
+                        ],
+                        "total": 5,
+                        "uri": "/users/152184/folders/98765/user_folder_access_grants"
+                    },
+                    "videos": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 12,
+                        "uri": "/users/152184/projects/12345/videos"
+                    }
+                },
+                "interactions": {
+                    "add_subfolder": {
+                        "can_add_subfolders": "boolean",
+                        "content_type": "string",
+                        "options": [
+                            "string"
+                        ],
+                        "properties": [
+                            "string"
+                        ],
+                        "subfolder_depth_limit_reached": "boolean",
+                        "uri": "/users/152184/projects/"
+                    },
+                    "allow_multiple_review_links": "boolean",
+                    "can_comment": "boolean",
+                    "delete": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/46345352"
+                    },
+                    "delete_video": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/"
+                    },
+                    "edit": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/"
+                    },
+                    "edit_settings": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/46345352"
+                    },
+                    "invite": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/"
+                    },
+                    "move_video": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/"
+                    },
+                    "review_redirect_link": "string",
+                    "upload_video": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/"
+                    },
+                    "view": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/"
+                    }
+                }
+            },
+            "modified_time": "2017-05-23T14:36:22+00:00",
+            "name": "Rough cuts",
+            "pinned_on": "2017-05-23T14:36:22+00:00",
+            "privacy": {
+                "view": "anybody"
+            },
+            "resource_key": "dc724af18fbdd4e59189f5fe768a5f8311527050",
+            "settings": {
+                "color": "#c0c0c0",
+                "embed_preset_id": 12345,
+                "folder_uri": "/users/112233/projects/12345",
+                "is_embed_preset_inheritance_enabled": true
+            },
+            "should_show_team_library_notification": true,
+            "uri": "/users/112233/projects/12345",
+            "user": {
+                "account": "advanced",
+                "age_verification_status": "failed",
+                "ai_credits_quota": {
+                    "available": 1234,
+                    "balances": [
+                        {
+                            "expiration_date": "2025-09-04T00:00:00-04:00",
+                            "remaining": 1234
+                        }
+                    ],
+                    "period": "year",
+                    "remaining": 1234,
+                    "reset_date": "2025-09-04T00:00:00-04:00",
+                    "used": 1234
+                },
+                "available_for_hire": false,
+                "bandwidth": {
+                    "period": "year"
+                },
+                "bio": "This is where you will find videos and news updates from the staff.",
+                "can_work_remotely": false,
+                "capabilities": [],
+                "clients": "vimeo",
+                "content_filter": [],
+                "created_time": "2007-01-18T16:40:11+00:00",
+                "drm_licenses_quota": {
+                    "available": 1234,
+                    "period": "year",
+                    "remaining": 1234,
+                    "reset_date": "2025-09-04T00:00:00-04:00",
+                    "used": 1234
+                },
+                "gender": "m",
+                "has_invalid_email": "boolean",
+                "is_expert": false,
+                "is_staff_picked": false,
+                "link": "https://vimeo.com/staff",
+                "lms_learner_seats_quota": {
+                    "available": 50,
+                    "used": 33
+                },
+                "location": "New York City",
+                "location_details": [
+                    {
+                        "city": "New York City",
+                        "country": "United States",
+                        "country_iso_code": "US",
+                        "formatted_address": "123 Street, NY",
+                        "latitude": 20.2960586,
+                        "longitude": 185.8245392,
+                        "neighborhood": "Brooklyn",
+                        "state": "New York",
+                        "state_iso_code": "NY",
+                        "sub_locality": "Brooklyn"
+                    }
+                ],
+                "metadata": {
+                    "connections": {
+                        "albums": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 3,
+                            "uri": "/users/152184/albums"
+                        },
+                        "appearances": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 6,
+                            "uri": "/users/152184/appearances"
+                        },
+                        "block": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 73,
+                            "uri": "/me/block"
+                        },
+                        "categories": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 5,
+                            "uri": "/users/152184/categories"
+                        },
+                        "channels": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 4,
+                            "uri": "/users/152184/channels"
+                        },
+                        "connected_apps": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 4,
+                            "uri": "/me/connected_apps"
+                        },
+                        "feed": {
+                            "options": [
+                                "string"
+                            ],
+                            "uri": "/users/152184/feed"
+                        },
+                        "folders": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 9,
+                            "uri": "/users/152184/folders"
+                        },
+                        "folders_root": {
+                            "options": [
+                                "string"
+                            ],
+                            "uri": "/users/123456789/folders/root"
+                        },
+                        "followers": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 12,
+                            "uri": "/users/152184/followers"
+                        },
+                        "following": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 47,
+                            "uri": "/users/152184/following"
+                        },
+                        "groups": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 2,
+                            "uri": "/users/152184/groups"
+                        },
+                        "import_apps": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 4,
+                            "uri": "/me/import_apps"
+                        },
+                        "lead_capture_form": {
+                            "options": [
+                                "string"
+                            ]
+                        },
+                        "likes": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 300,
+                            "uri": "/users/152184/likes"
+                        },
+                        "moderated_channels": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 1,
+                            "uri": "/users/152184/channels?filter=moderated"
+                        },
+                        "ms_teams_team_folder_id": {
+                            "options": [
+                                "string"
+                            ],
+                            "uri": "/users/152184/projects/1234"
+                        },
+                        "ms_teams_tenant_token_id": "string",
+                        "pictures": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 3,
+                            "uri": "/users/152184/pictures"
+                        },
+                        "portfolios": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 5,
+                            "uri": "/users/152184/portfolios"
+                        },
+                        "recommended_channels": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 4,
+                            "uri": "/me/recommendations/channels"
+                        },
+                        "recommended_users": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 6,
+                            "uri": "/me/recommendations/users"
+                        },
+                        "shared": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 15,
+                            "uri": "/users/152184/shared/videos"
+                        },
+                        "videos": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 36,
+                            "uri": "/users/152184/videos"
+                        },
+                        "view_profile": {
+                            "disabled": {
+                                "reasons": [
+                                    "string"
+                                ]
+                            },
+                            "mod_override": "boolean",
+                            "options": [
+                                "string"
+                            ],
+                            "uri": "/users/1234567"
+                        },
+                        "watched_videos": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 322,
+                            "uri": "/me/watched/videos"
+                        },
+                        "watchlater": {
+                            "options": [
+                                "string"
+                            ],
+                            "total": 14,
+                            "uri": "/users/152184/watchlater"
+                        }
+                    },
+                    "interactions": {
+                        "add_privacy_user": {
+                            "options": [
+                                "string"
+                            ],
+                            "uri": "/channels/152184/privacy/users"
+                        },
+                        "block": {
+                            "added": true,
+                            "added_time": "2017-05-16T15:05:43+00:00",
+                            "options": [
+                                "string"
+                            ],
+                            "uri": "/me/block/3766357"
+                        },
+                        "connected_apps": {
+                            "all_scopes": [],
+                            "is_connected": true,
+                            "needed_scopes": [],
+                            "options": [
+                                "string"
+                            ],
+                            "uri": "/me/connected_apps/facebook"
+                        },
+                        "follow": {
+                            "added": true,
+                            "options": [
+                                "string"
+                            ],
+                            "uri": "/users/152184/following/3766357"
+                        },
+                        "report": {
+                            "options": [
+                                "string"
+                            ],
+                            "reason": [
+                                "string"
+                            ],
+                            "uri": "/users/152184/report"
+                        }
+                    },
+                    "ms_teams_encrypted_team_id": "string",
+                    "public_videos": {
+                        "total": 100
+                    }
+                },
+                "name": "Vimeo Staff",
+                "pictures": [],
+                "preferences": {
+                    "videos": {
+                        "auto_generate_review_link": false,
+                        "autocc_display_enabled_by_default": false,
+                        "embed_preset_uri": "string",
+                        "hide_stats": false,
+                        "keep_source_files": false,
+                        "license": "by",
+                        "page_preset_uri": "string",
+                        "password": "hunter1",
+                        "privacy": {
+                            "add": true,
+                            "allow_share_link": true,
+                            "clip_embed_allowed_domains": [
+                                "string"
+                            ],
+                            "comments": "anybody",
+                            "download": true,
+                            "embed": "private",
+                            "password": "videopassword",
+                            "view": "anybody"
+                        },
+                        "rating": []
+                    }
+                },
+                "profile_discovery": true,
+                "requires_age_verification": false,
+                "resource_key": "bac1033deba2310ebba2caec33c23e4beea67aba",
+                "short_bio": "This is a short biography about me!",
+                "skills": {
+                    "name": "Director",
+                    "uri": "/marketplace/skills/152184"
+                },
+                "transcript_phrases_limit": 50,
+                "upload_quota": {
+                    "lifetime": {
+                        "free": 5000000,
+                        "max": 5368709120,
+                        "unit": "video_count",
+                        "used": 5368704120
+                    },
+                    "periodic": {
+                        "free": 5000000,
+                        "max": 5368709120,
+                        "period": "lifetime",
+                        "reset_date": "2029-03-13T02:35:13-04:00",
+                        "unit": "video_count",
+                        "used": 5368704120
+                    },
+                    "space": {
+                        "free": 5000000,
+                        "max": 5368709120,
+                        "showing": "lifetime",
+                        "unit": "video_count",
+                        "used": 5368704120
+                    }
+                },
+                "uri": "/users/152184",
+                "websites": [
+                    {
+                        "description": "Follow us on Twitter!",
+                        "link": "https://twitter.com/vimeo",
+                        "name": "Twitter",
+                        "type": "facebook",
+                        "uri": "/users/1234/links/1"
+                    }
+                ]
+            }
+        }
+    ],
+    "password": "hunter1",
+    "pictures": [],
+    "play": [
+        {
+            "dash": [
+                {
+                    "link": "https://player.vimeo.com/play/965853365?s=258684937_1537",
+                    "link_expiration_time": "2017-05-16T17:21:51+00:00",
+                    "log": "https:/api.vimeo.com/videos/258684937/log/12337123/76af42bfd"
+                }
+            ],
+            "hls": [
+                {
+                    "link": "https://player.vimeo.com/play/965853365?s=258684937_1537",
+                    "link_expiration_time": "2017-05-16T17:21:51+00:00",
+                    "log": "https:/api.vimeo.com/videos/258684937/log/12337123/76af42bfd"
+                }
+            ],
+            "player_fairplay_certificate_url": "https://vimeocdn.com/fairplay/cert",
+            "player_license_url": "https://player_license_url",
+            "progressive": [
+                {
+                    "codec": "AV1",
+                    "created_time": "2017-05-16T17:21:51+00:00",
+                    "fps": 30,
+                    "height": 720,
+                    "link": "string",
+                    "link_expiration_time": "2017-05-16T17:21:51+00:00",
+                    "log": [],
+                    "md5": "1bc29b36f623ba82aaf6724fd3b16718",
+                    "rendition": "1080p",
+                    "size": 5000000,
+                    "type": "source",
+                    "width": 1280
+                }
+            ],
+            "status": "drm_plays_exceeded"
+        }
+    ],
+    "player_embed_url": "https://player.vimeo.com/video/258684937?h=c893f64dd6",
+    "privacy": {
+        "add": true,
+        "allow_share_link": "boolean",
+        "comments": "anybody",
+        "download": true,
+        "embed": "private",
+        "view": "anybody"
+    },
+    "rating_mod_locked": "boolean",
+    "release_time": "2018-03-05T21:04:47+00:00",
+    "resource_key": "bac1033deba2310ebba2caec33c23e4beea67aba",
+    "review_links": [
+        {
+            "allow_comments": true,
+            "allow_downloads": true,
+            "allow_status_change": true,
+            "created": "2024-09-28T23:00:00",
+            "expires_on": "2024-09-30T23:59:59",
+            "is_dark": true,
+            "is_enabled": true,
+            "logo_url": "https://some.cdn.url/path",
+            "modified_on": "2024-09-29T23:00:00",
+            "name": "Video Link",
+            "password": "password",
+            "show_all_versions": true,
+            "show_my_logo": true,
+            "show_resolved_comments": true,
+            "uri": "/videos/258684937/review_links/8950b323-e1de-4f20-a04c-5f3ad48b7114",
+            "url": "/reviews/8950b323-e1de-4f20-a04c-5f3ad48b7114/videos/258684937"
+        }
+    ],
+    "review_status": "approved",
+    "show_review_page": "boolean",
+    "show_svv_footer_banner": "boolean",
+    "show_svv_timecoded_comments": "boolean",
+    "spatial": {
+        "director_timeline": [
+            {
+                "pitch": 70,
+                "roll": 0,
+                "time_code": 300,
+                "yaw": 125
+            }
+        ],
+        "field_of_view": 50,
+        "projection": "cubical",
+        "stereo_format": "left-right"
+    },
+    "stats": {
+        "plays": 20
+    },
+    "status": "available",
+    "tags": [
+        {
+            "canonical": "awesome",
+            "metadata": {
+                "connections": {
+                    "videos": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 34371,
+                        "uri": "/tags/awesome/videos"
+                    }
+                }
+            },
+            "name": "awesome",
+            "resource_key": "bac1033deba2310ebba2caec33c23e4beea67aba",
+            "uri": "/videos/258684937/tags/awesome"
+        }
+    ],
+    "transcode": {
+        "status": "complete"
+    },
+    "transcript": {
+        "language": "en",
+        "status": "blocked"
+    },
+    "type": "video",
+    "upload": {
+        "approach": "post",
+        "form": "string",
+        "gcs_uid": "string",
+        "link": "string",
+        "redirect_url": "string",
+        "size": 60000,
+        "status": "complete",
+        "upload_link": "string"
+    },
+    "uploader": {
+        "link": "string",
+        "name": "string",
+        "pictures": []
+    },
+    "uri": "/videos/258684937",
+    "user": [
+        {
+            "account": "advanced",
+            "age_verification_status": "failed",
+            "ai_credits_quota": {
+                "available": 1234,
+                "balances": [
+                    {
+                        "expiration_date": "2025-09-04T00:00:00-04:00",
+                        "remaining": 1234
+                    }
+                ],
+                "period": "year",
+                "remaining": 1234,
+                "reset_date": "2025-09-04T00:00:00-04:00",
+                "used": 1234
+            },
+            "available_for_hire": false,
+            "bandwidth": {
+                "period": "year"
+            },
+            "bio": "This is where you will find videos and news updates from the staff.",
+            "can_work_remotely": false,
+            "capabilities": [],
+            "clients": "vimeo",
+            "content_filter": [],
+            "created_time": "2007-01-18T16:40:11+00:00",
+            "drm_licenses_quota": {
+                "available": 1234,
+                "period": "year",
+                "remaining": 1234,
+                "reset_date": "2025-09-04T00:00:00-04:00",
+                "used": 1234
+            },
+            "gender": "m",
+            "has_invalid_email": "boolean",
+            "is_expert": false,
+            "is_staff_picked": false,
+            "link": "https://vimeo.com/staff",
+            "lms_learner_seats_quota": {
+                "available": 50,
+                "used": 33
+            },
+            "location": "New York City",
+            "location_details": [
+                {
+                    "city": "New York City",
+                    "country": "United States",
+                    "country_iso_code": "US",
+                    "formatted_address": "123 Street, NY",
+                    "latitude": 20.2960586,
+                    "longitude": 185.8245392,
+                    "neighborhood": "Brooklyn",
+                    "state": "New York",
+                    "state_iso_code": "NY",
+                    "sub_locality": "Brooklyn"
+                }
+            ],
+            "metadata": {
+                "connections": {
+                    "albums": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 3,
+                        "uri": "/users/152184/albums"
+                    },
+                    "appearances": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 6,
+                        "uri": "/users/152184/appearances"
+                    },
+                    "block": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 73,
+                        "uri": "/me/block"
+                    },
+                    "categories": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 5,
+                        "uri": "/users/152184/categories"
+                    },
+                    "channels": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 4,
+                        "uri": "/users/152184/channels"
+                    },
+                    "connected_apps": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 4,
+                        "uri": "/me/connected_apps"
+                    },
+                    "feed": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/feed"
+                    },
+                    "folders": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 9,
+                        "uri": "/users/152184/folders"
+                    },
+                    "folders_root": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/123456789/folders/root"
+                    },
+                    "followers": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 12,
+                        "uri": "/users/152184/followers"
+                    },
+                    "following": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 47,
+                        "uri": "/users/152184/following"
+                    },
+                    "groups": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 2,
+                        "uri": "/users/152184/groups"
+                    },
+                    "import_apps": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 4,
+                        "uri": "/me/import_apps"
+                    },
+                    "lead_capture_form": {
+                        "options": [
+                            "string"
+                        ]
+                    },
+                    "likes": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 300,
+                        "uri": "/users/152184/likes"
+                    },
+                    "moderated_channels": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 1,
+                        "uri": "/users/152184/channels?filter=moderated"
+                    },
+                    "ms_teams_team_folder_id": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/projects/1234"
+                    },
+                    "ms_teams_tenant_token_id": "string",
+                    "pictures": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 3,
+                        "uri": "/users/152184/pictures"
+                    },
+                    "portfolios": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 5,
+                        "uri": "/users/152184/portfolios"
+                    },
+                    "recommended_channels": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 4,
+                        "uri": "/me/recommendations/channels"
+                    },
+                    "recommended_users": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 6,
+                        "uri": "/me/recommendations/users"
+                    },
+                    "shared": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 15,
+                        "uri": "/users/152184/shared/videos"
+                    },
+                    "videos": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 36,
+                        "uri": "/users/152184/videos"
+                    },
+                    "view_profile": {
+                        "disabled": {
+                            "reasons": [
+                                "string"
+                            ]
+                        },
+                        "mod_override": "boolean",
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/1234567"
+                    },
+                    "watched_videos": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 322,
+                        "uri": "/me/watched/videos"
+                    },
+                    "watchlater": {
+                        "options": [
+                            "string"
+                        ],
+                        "total": 14,
+                        "uri": "/users/152184/watchlater"
+                    }
+                },
+                "interactions": {
+                    "add_privacy_user": {
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/channels/152184/privacy/users"
+                    },
+                    "block": {
+                        "added": true,
+                        "added_time": "2017-05-16T15:05:43+00:00",
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/me/block/3766357"
+                    },
+                    "connected_apps": {
+                        "all_scopes": [],
+                        "is_connected": true,
+                        "needed_scopes": [],
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/me/connected_apps/facebook"
+                    },
+                    "follow": {
+                        "added": true,
+                        "options": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/following/3766357"
+                    },
+                    "report": {
+                        "options": [
+                            "string"
+                        ],
+                        "reason": [
+                            "string"
+                        ],
+                        "uri": "/users/152184/report"
+                    }
+                },
+                "ms_teams_encrypted_team_id": "string",
+                "public_videos": {
+                    "total": 100
+                }
+            },
+            "name": "Vimeo Staff",
+            "pictures": [],
+            "preferences": {
+                "videos": {
+                    "auto_generate_review_link": false,
+                    "autocc_display_enabled_by_default": false,
+                    "embed_preset_uri": "string",
+                    "hide_stats": false,
+                    "keep_source_files": false,
+                    "license": "by",
+                    "page_preset_uri": "string",
+                    "password": "hunter1",
+                    "privacy": {
+                        "add": true,
+                        "allow_share_link": true,
+                        "clip_embed_allowed_domains": [
+                            "string"
+                        ],
+                        "comments": "anybody",
+                        "download": true,
+                        "embed": "private",
+                        "password": "videopassword",
+                        "view": "anybody"
+                    },
+                    "rating": []
+                }
+            },
+            "profile_discovery": true,
+            "requires_age_verification": false,
+            "resource_key": "bac1033deba2310ebba2caec33c23e4beea67aba",
+            "short_bio": "This is a short biography about me!",
+            "skills": [
+                {
+                    "name": "Director",
+                    "uri": "/marketplace/skills/152184"
+                }
+            ],
+            "transcript_phrases_limit": 50,
+            "upload_quota": {
+                "lifetime": {
+                    "free": 5000000,
+                    "max": 5368709120,
+                    "unit": "video_count",
+                    "used": 5368704120
+                },
+                "periodic": {
+                    "free": 5000000,
+                    "max": 5368709120,
+                    "period": "lifetime",
+                    "reset_date": "2029-03-13T02:35:13-04:00",
+                    "unit": "video_count",
+                    "used": 5368704120
+                },
+                "space": {
+                    "free": 5000000,
+                    "max": 5368709120,
+                    "showing": "lifetime",
+                    "unit": "video_count",
+                    "used": 5368704120
+                }
+            },
+            "uri": "/users/152184",
+            "websites": [
+                {
+                    "description": "Follow us on Twitter!",
+                    "link": "https://twitter.com/vimeo",
+                    "name": "Twitter",
+                    "type": "facebook",
+                    "uri": "/users/1234/links/1"
+                }
+            ]
+        }
+    ],
+    "uses_drm": "boolean",
+    "version_transcode_status": [
+        {
+            "is_complete": "boolean",
+            "is_fully_playable": "boolean",
+            "is_playable": "boolean"
+        }
+    ],
+    "vod": {
+        "id": "number",
+        "link": "string"
+    },
+    "width": 1920
+}

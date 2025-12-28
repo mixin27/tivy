@@ -1,27 +1,27 @@
 name: tivy
 description: Flutter package for getting playable video quality urls for vimeo and youtube with video player.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/mixin27/tivy
 issue_tracker: https://github.com/mixin27/tivy/issues
 funding:
   - https://www.buymeacoffee.com/kyawzayartun98
 
 environment:
-  sdk: ^3.9.0
+  sdk: ^3.10.4
   flutter: ">=1.17.0"
 
 dependencies:
   equatable: ^2.0.7
   flutter:
     sdk: flutter
-  http: ^1.5.0
-  youtube_explode_dart: ^2.5.2
+  http: ^1.6.0
+  youtube_explode_dart: ^3.0.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   mocktail: ^1.0.4
-  very_good_analysis: ^9.0.0
+  very_good_analysis: ^10.0.0
 
 # This package supports all platforms listed below.
 platforms:
