@@ -51,8 +51,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _getVimeoVideoInfo() async {
     try {
-      final result =
-          await Tivy.getVimeoVideoInfo('https://vimeo.com/989554278');
+      final result = await Tivy.getVimeoVideoInfo(
+        'https://vimeo.com/989554278',
+      );
       setState(() {
         _vimeoVideoInfo = result;
       });
@@ -75,8 +76,8 @@ class _MyHomePageState extends State<MyHomePage> {
   _getVimeoData() async {
     try {
       final vimeoResult = await Tivy.getVimeoVideoQualityUrls(
-        '989554278',
-        accessToken: 'your_vimeo_access_token',
+        '1149767094',
+        accessToken: '0e21db6e83d3718185002c2ed8d75342',
       );
       log('vimeoUrls: $vimeoResult');
       setState(() {
@@ -93,9 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: AppBar(title: Text(widget.title)),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -104,9 +103,9 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(16),
               child: Text(
                 "YouTube URI : https://www.youtube.com/watch?v=_EYk-E29edo",
-                style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                      fontSize: 15,
-                    ),
+                style: Theme.of(
+                  context,
+                ).textTheme.labelSmall!.copyWith(fontSize: 15),
               ),
             ),
             Text(
@@ -114,9 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             _youtubeVideoUrls.isEmpty
-                ? const Center(
-                    child: Text("No links"),
-                  )
+                ? const Center(child: Text("No links"))
                 : ListView.separated(
                     primary: false,
                     shrinkWrap: true,
@@ -150,28 +147,23 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(16),
               child: Text(
                 "Vimeo URI : https://vimeo.com/6718739",
-                style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                      fontSize: 15,
-                    ),
+                style: Theme.of(
+                  context,
+                ).textTheme.labelSmall!.copyWith(fontSize: 15),
               ),
             ),
             if (_vimeoVideoInfo != null) ...[
               Text(_vimeoVideoInfo?.html ?? 'unknown html'),
               const SizedBox(height: 10),
             ],
-            if (_error != null)
-              Center(
-                child: Text(_error ?? 'Error'),
-              ),
+            if (_error != null) Center(child: Text(_error ?? 'Error')),
             if (_error == null)
               Text(
                 "Vimeo Video Quality Links",
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
             _vimeoVideoUrls.isEmpty && _error == null
-                ? const Center(
-                    child: Text("No video links"),
-                  )
+                ? const Center(child: Text("No video links"))
                 : ListView.separated(
                     primary: false,
                     shrinkWrap: true,
@@ -207,11 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class LinkDetailPage extends StatelessWidget {
-  const LinkDetailPage({
-    super.key,
-    required this.title,
-    required this.link,
-  });
+  const LinkDetailPage({super.key, required this.title, required this.link});
 
   final String title;
   final String link;
@@ -219,15 +207,10 @@ class LinkDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
+      appBar: AppBar(title: Text(title)),
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: Text(
-          link,
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
+        child: Text(link, style: Theme.of(context).textTheme.titleMedium),
       ),
     );
   }

@@ -1,3 +1,7 @@
+## 1.0.2
+
+- bumps: `youtube_explode_dart: ^3.0.5`, `http: ^1.6.0`
+
 ## 1.0.1
 
 - Dependencies update

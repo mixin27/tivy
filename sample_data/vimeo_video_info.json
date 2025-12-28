@@ -1,0 +1,23 @@
+{
+    "type": "video",
+    "version": "1.0",
+    "provider_name": "Vimeo",
+    "provider_url": "https://vimeo.com/",
+    "title": "Sample",
+    "author_name": "Kyaw Zayar TUN",
+    "author_url": "https://vimeo.com/user252421507",
+    "is_plus": "0",
+    "account_type": "free",
+    "html": "\u003Ciframe src=\"https://player.vimeo.com/video/1149767094?app_id=122963\" width=\"426\" height=\"240\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" title=\"Sample\"\u003E\u003C/iframe\u003E",
+    "width": 426,
+    "height": 240,
+    "duration": 23,
+    "description": "",
+    "thumbnail_url": "https://i.vimeocdn.com/video/2100488759-5f347463879bf18c016cb3839d9c979dc14a09f7f4d546f84e75372b812ddc60-d_295x166?region=us",
+    "thumbnail_width": 295,
+    "thumbnail_height": 166,
+    "thumbnail_url_with_play_button": "https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F2100488759-5f347463879bf18c016cb3839d9c979dc14a09f7f4d546f84e75372b812ddc60-d_295x166%3Fregion%3Dus&src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png",
+    "upload_date": "2025-12-27 22:27:53",
+    "video_id": 1149767094,
+    "uri": "/videos/1149767094"
+}
